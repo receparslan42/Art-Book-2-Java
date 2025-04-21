@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.AddingFragment">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        app:columnCount="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rowCount="5">
+
+        <ImageView
+            android:id="@+id/artImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/select_an_image"
+            android:scaleType="fitCenter"
+            android:src="@drawable/select_image"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="4" />
+
+        <EditText
+            android:id="@+id/artNameEditText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autofillHints="name"
+            android:hint="@string/art_name"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <EditText
+            android:id="@+id/artistEditText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autofillHints="designer"
+            android:hint="@string/artist_name"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <EditText
+            android:id="@+id/artTimeEditText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:autofillHints="Date"
+            android:hint="@string/design_date_of_the_art"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="32sp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="@string/save"
+            android:textSize="32sp"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1" />
+
+    </androidx.gridlayout.widget.GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

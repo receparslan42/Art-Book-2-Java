@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/showFragment">
+
+    <fragment
+        android:id="@+id/showFragment"
+        android:name="com.receparslan.artbook2.view.ShowFragment"
+        android:label="fragment_show"
+        tools:layout="@layout/fragment_show">
+        <action
+            android:id="@+id/action_showFragment_to_addingFragment"
+            app:destination="@id/addingFragment" />
+        <action
+            android:id="@+id/action_showFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addingFragment"
+        android:name="com.receparslan.artbook2.view.AddingFragment"
+        android:label="fragment_adding"
+        tools:layout="@layout/fragment_adding">
+        <action
+            android:id="@+id/action_addingFragment_to_showFragment"
+            app:destination="@id/showFragment" />
+        <argument
+            android:name="Key"
+            app:argType="string" />
+        <argument
+            android:name="artID"
+            android:defaultValue="-1"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.receparslan.artbook2.view.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/action_detailFragment_to_showFragment"
+            app:destination="@id/showFragment" />
+        <argument
+            android:name="ArtID"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_detailFragment_to_addingFragment"
+            app:destination="@id/addingFragment" />
+    </fragment>
+</navigation>
